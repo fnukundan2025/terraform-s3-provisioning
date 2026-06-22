@@ -1,1 +1,1 @@
-bucket_name = "aws_s3_bucket.example.bucket"
+bucket_name = "aws_s3_bucket.main.bucket"
