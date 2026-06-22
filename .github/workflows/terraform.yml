@@ -51,7 +51,4 @@ jobs:
       - name: terraform Validate
         run: terraform validate
      
-    
-      - name: terraform Apply
-        run: terraform apply
-        
+         
