@@ -47,13 +47,11 @@ jobs:
 
       - name: terraform Init
         run: terraform init
-        working-directory: terraform
-
+     
       - name: terraform Validate
         run: terraform validate
-        working-directory: terraform
-
+     
     
       - name: terraform Apply
         run: terraform apply
-        working-directory: terraform
+        
