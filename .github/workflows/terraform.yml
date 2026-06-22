@@ -32,12 +32,18 @@ jobs:
         with:
           terraform_version: 1.6.6
 
-      - name: Configure AWS Credentials
-        uses: aws-actions/configure-aws-credentials@v4
-        with:
-          aws-access-key-id: ${{ AKIASSJNMVJ2OORVOXML }}
-          aws-secret-access-key: ${{ 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 }}
-          aws-region: ${{ env.AWS_REGION }}
+      - name: Setup Terraform Cloud Token
+        run: |
+          mkdir -p ~/.terraform.d
+          cat > ~/.terraform.d/credentials.tfrc.json <<EOF
+          {
+            "credentials": {
+              "app.terraform.io": {
+                "token": "${{ secrets.TF_API_TOKEN }}"
+              }
+            }
+          }
+          EOF
 
       - name: Terraform Init
         run: terraform init
