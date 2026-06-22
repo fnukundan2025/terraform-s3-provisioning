@@ -49,18 +49,18 @@ jobs:
         run: terraform init
         working-directory: terraform
 
-      - name: Terraform Format
+      - name: terraform Format
         run: terraform fmt -check
         working-directory: terraform
 
-      - name: Terraform Validate
+      - name: terraform Validate
         run: terraform validate
         working-directory: terraform
 
-      - name: Terraform Plan
+      - name: terraform Plan
         run: terraform plan -out=tfplan
         working-directory: terraform
 
-      - name: Terraform Apply
+      - name: terraform Apply
         run: terraform apply -auto-approve tfplan
         working-directory: terraform
