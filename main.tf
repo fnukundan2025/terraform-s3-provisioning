@@ -27,10 +27,3 @@ resource "aws_s3_bucket" "example" {
   tags = {
     Name        = "Demo S3 Bucket"
     Environment = "Dev"
-
-
-  tags = {
-    Name        = "aws_s3_bucket.example.bucket"
-    Environment = "Dev"
-  }
-}
