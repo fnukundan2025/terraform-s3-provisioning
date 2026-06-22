@@ -21,11 +21,11 @@ provider "aws" {
   region = var.aws_region
 }
 
-resource "aws_s3_bucket" "example" {
-  bucket = var.bucket_name
+resource "aws_s3_bucket" "main" {
+  bucket = aws_s3_bucket.example.bucket
 
   tags = {
-    Name        = "Demo S3 Bucket"
+    Name        = "aws_s3_bucket.example.bucket"
     Environment = "Dev"
   }
 }
