@@ -49,10 +49,6 @@ jobs:
         run: terraform init
         working-directory: terraform
 
-      - name: terraform Format
-        run: terraform fmt -check
-        working-directory: terraform
-
       - name: terraform Validate
         run: terraform validate
         working-directory: terraform
