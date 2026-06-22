@@ -1,1 +1,1 @@
-bucket_name = "my-unique-s3-bucket-demo"
+bucket_name = "aws_s3_bucket.example.bucket"
