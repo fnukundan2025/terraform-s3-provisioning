@@ -28,3 +28,4 @@ resource "aws_s3_bucket" "main" {
     Name        = "Demo S3 Bucket"
     Environment = "Dev"
 }
+}
