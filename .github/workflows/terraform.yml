@@ -53,10 +53,7 @@ jobs:
         run: terraform validate
         working-directory: terraform
 
-      - name: terraform Plan
-        run: terraform plan 
-        working-directory: terraform
-
+    
       - name: terraform Apply
         run: terraform apply
         working-directory: terraform
