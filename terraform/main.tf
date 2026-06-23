@@ -15,6 +15,11 @@ terraform {
       name = "terraform-s3-provisioning"
     }
   }
+backend "s3" {
+     bucket         = "amazon-s3-terraform-demo-kk"
+     key            = "s3-deployment/terraform.tfstate"
+     region         = "us-east-1"
+   }
 }
 
 provider "aws" {
