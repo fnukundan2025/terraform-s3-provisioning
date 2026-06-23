@@ -26,6 +26,6 @@ resource "aws_s3_bucket" "main" {
 }
   tags = {
     Name        = "Demo S3 Bucket"
-    Environment = "DEv"
+    Environment = "DEV"
 }
 
