@@ -44,7 +44,8 @@ jobs:
             }
           }
           EOF
-
+       - name: terraform fmt
+        run: terraform fmt
       - name: terraform Init
         run: terraform init
      
