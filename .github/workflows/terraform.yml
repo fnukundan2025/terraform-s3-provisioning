@@ -17,7 +17,7 @@ on:
 
 jobs:
   terraform:
-    name: terraform Apply
+    name: Terraform Apply
     runs-on: ubuntu-latest
 
     env:
@@ -27,12 +27,12 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v3
 
-      - name: Setup terraform
+      - name: Setup Terraform
         uses: hashicorp/setup-terraform@v3
         with:
           terraform_version: 1.6.6
 
-      - name: Setup terraform Cloud Token
+      - name: Setup Terraform Cloud Token
         run: |
           mkdir -p ~/.terraform.d
           cat > ~/.terraform.d/credentials.tfrc.json <<EOF
@@ -44,12 +44,12 @@ jobs:
             }
           }
           EOF
-       - name: terraform fmt
-        run: terraform fmt
-      - name: terraform Init
+
+      - name: Terraform fmt
+        run: terraform fmt -recursive
+
+      - name: Terraform Init
         run: terraform init
-     
-      - name: terraform Validate
+
+      - name: Terraform Validate
         run: terraform validate
-     
-         
