@@ -15,22 +15,23 @@ terraform {
       name = "terraform-s3-provisioning"
     }
   }
-backend "s3" {
-     bucket         = "amazon-s3-terraform-demo-kk"
-     key            = "s3-deployment/terraform.tfstate"
-     region         = "us-east-1"
-   }
 }
 
-provider "aws" {
-  region = var.aws_region
-}
-
-resource "aws_s3_bucket" "main" {
+resource "aws_s3_bucket" "my_bucket" {
   bucket = var.bucket_name
 
   tags = {
-    Name        = "Demo S3 Bucket"
-    Environment = "Dev"
+    Name        = var.bucket_name
+    Environment = "dev"
   }
 }
+
+# Optional: Enable versioning
+resource "aws_s3_bucket_versioning" "versioning" {
+  bucket = aws_s3_bucket.my_bucket.id
+
+  versioning_configuration {
+    status = "Enabled"
+  }
+}
+
