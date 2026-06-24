@@ -1,16 +1,16 @@
 terraform {
   required_version = ">= 1.5"
- 
+
   required_providers {
     aws = {
       source  = "hashicorp/aws"
-      version = "~> 5.0"
+      version = "~> 5.30.0"
     }
   }
- 
+
   cloud {
     organization = "My-Terraform-Project-demo"
- 
+
     workspaces {
       name = "terraform-s3-provisioning"
     }
