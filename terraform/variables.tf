@@ -1,7 +1,14 @@
 variable "aws_region" {
-  default = "us-east-1"
-}
-
-variable "bucket_name" {
-  description = "Unique S3 bucket name"
-}
+    description = "AWS region"
+    default     = "us-east-1"
+  }
+ 
+  variable "bucket_name" {
+    description = "S3 bucket name (must be globally unique)"
+    type        = string
+  }
+ 
+  variable "environment" {
+    description = "Environment name"
+    default     = "dev"
+  }
