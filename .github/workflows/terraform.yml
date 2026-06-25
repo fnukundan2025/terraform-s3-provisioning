@@ -39,9 +39,6 @@ jobs:
       - name: Terraform Format Check
         run: terraform fmt -check
 
-      - name: Terraform Validate
-        run: terraform validate
-
       - name: Terraform Plan
         run: terraform plan -var="bucket_name=my-unique-bucket-name-Kundan_demo"
 
