@@ -42,6 +42,4 @@ jobs:
       - name: Terraform Plan
         run: terraform plan -var="bucket_name=my-unique-bucket-name-Kundan_demo"
 
-      - name: Terraform Apply
-        if: github.ref == 'refs/heads/main'
-        run: terraform apply -auto-approve -var="bucket_name=my-unique-bucket-name-Kundan_demo"
+     
