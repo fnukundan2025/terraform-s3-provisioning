@@ -1,1 +1,3 @@
-bucket_name = "value = aws_s3_bucket.my_bucket."
+bucket_name = "my-unique-bucket-name-Kundan_demo"
+  aws_region  = "us-east-1"
+  environment = "dev"
